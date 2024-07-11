@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <style>
+        #footer {
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            margin-top: 200px;
+        }
+  </style>
+</head>
+<body>
+{% block content %}
+{% endblock %}
+</body>
+<footer id="footer">
+  {% block footer %}
+    <p>created by Khulood AlShahrani</p>
+  {% endblock %}
+</footer>
+</html>

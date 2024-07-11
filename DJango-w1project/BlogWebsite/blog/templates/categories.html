@@ -1,0 +1,19 @@
+{% extends "master.html" %}
+
+{% block title %}
+  BlogWebsite - Categories
+{% endblock %}
+
+
+{% block content %}
+  <h1>Categories</h1>
+
+  <p><a href="/">Home</a></p>
+
+  <ul>
+    {% for x in myg %}
+      <li><a href="">{{ x.name }}</a></li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

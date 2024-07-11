@@ -1,0 +1,31 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ myblog.title }}
+{% endblock %}
+
+
+{% block content %}
+
+<p><a href="/">Home</a></p>
+
+<h1>{{ myblog.title }}</h1>
+    <p>{{ myblog.content }}</p>
+    <p><strong>Category:</strong> {{ myblog.category }}</p>
+    <p><strong>Published on:</strong> {{ myblog.date_published }}</p>
+
+    <h2>Comments</h2>
+    <ul>
+        {% for comment in comments %}
+            <li>
+                <p>{{ comment.content }}</p>
+                <p><strong>Posted by:</strong> {{ comment.user_id.username }} on {{ comment.date_posted }}</p>
+            </li>
+        {% empty %}
+            <li>No comments yet.</li>
+        {% endfor %}
+    </ul>
+
+<p>Back to <a href="/blogs">Blogs</a></p>
+
+{% endblock %}

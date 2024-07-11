@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Details about {{ myuser.username }}
+{% endblock %}
+
+
+{% block content %}
+  <p><a href="/">Home</a></p>
+  <h1>{{ myuser.username }}</h1>
+
+  <p>User ID: {{ myuser.uid }}</p>
+  <p>Email: {{ myuser.email }}</p>
+
+  <p>Back to <a href="/users">Users</a></p>
+
+{% endblock %}
